@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, red, red, red, yellow, yellow, red, red, red);
+    background-size: 500% 500%;
+    animation: background-move 1s infinite;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: black;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  #intro {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #content {
+    display: none;
+    padding: 10px;
+  }
+
+  #startButton {
+    aspect-ratio: 1 / 1;
+    width: 80vmin;        
+    max-width: 90%; 
+    max-height: 90vh;
+    border-radius: 50%; 
+    border-radius: 100%;
+    border: none;
+    font-size: 3rem;
+    font-weight: bold;
+    background: radial-gradient(circle, red, yellow, blue);
+    color: white;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes background-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .parpadeo {
+    text-shadow: 2px 2px 5px white;
+    animation: parpadeo 1s infinite;
+  }
+  
+  @keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+  
+  .mensaje {
+    font-size: 1.3em;
+    margin: 20px auto;
+    width: 80%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 3px dashed #000;
+    border-radius: 20px;
+  }
+  
+  .gif-movido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    transform: translate(-50%, -50%);
+    animation: moverse 3s infinite linear;
+  }
+  
+  @keyframes moverse {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-30%, -40%) rotate(360deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+  }
+  
+  .boton-gritar {
+    background: linear-gradient(to right, yellow, red);
+    color: black;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: 5px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    animation: temblar 0.3s infinite;
+  }
+  
+  @keyframes temblar {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .submensaje {
+    margin-top: 20px;
+    font-style: italic;
+  }

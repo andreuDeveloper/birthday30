@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CUMPLE ANDREU 30</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <div id="intro">
+      <button id="startButton" onclick="startFiesta()"></button>
+    </div>
+
+    <div id="content">
+      <!-- Sounds -->
+      <audio
+        id="himno"
+        src="assets/audio/spain.mp3"
+        preload="auto"
+        loop
+      ></audio>
+      <audio
+        id="lightweight"
+        src="assets/audio/lightweight.mp3"
+        preload="auto"
+        loop
+      ></audio>
+
+      <h1 class="parpadeo">🎉30 AÑOS🎉</h1>
+      <h2 class="parpadeo">ANDREU</h2>
+
+      <p class="mensaje">
+        🔥 Vente el <strong>20 de julio</strong> a la casa rural. Piscina,
+        carne, cerveza, gritos, reggaetón, y cosas de gente madura.
+        <em>¡NO FALTES O TE BORRO DEL GRUPO!</em>
+      </p>
+
+      <img src="assets/img/gif-loco.gif" alt="YO" class="gif-movido" />
+
+      <button class="boton-gritar" onclick="gritar()">💥 ASISTIRÉ 💥</button>
+
+      <p class="submensaje">
+        Pulsa el botón y siente el poder de España y la amistad.
+      </p>
+
+      <div id="map" style="height: 300px; width: 100%; margin-top: 2rem;"></div>
+      <button id="openMapsBtn" onclick="openMaps()">📍 Abrir en Maps</button>
+    </div>
+
+
+    <!-- Scripts -->
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
