@@ -22,6 +22,8 @@ body {
   #content {
     display: none;
     padding: 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
   #startButton {
@@ -29,15 +31,48 @@ body {
     width: 80vmin;        
     max-width: 90%; 
     max-height: 90vh;
-    border-radius: 50%; 
-    border-radius: 100%;
+    border-radius: 50%;
     border: none;
-    font-size: 3rem;
+  
+    font-size: 50vmin;
     font-weight: bold;
-    background: radial-gradient(circle, red, yellow, blue);
+  
+    background: linear-gradient(to bottom, red 33%, yellow 34% 66%, red 67%);
     color: white;
     cursor: pointer;
     animation: pulse 2s infinite;
+  
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .space-between {
+    justify-content: space-between;
+  }
+
+  .space-evenly {
+    justify-content: space-evenly;
+  }
+
+  #startButton.shrinking {
+    animation: shrinkOut 1s ease forwards;
+  }
+  
+  @keyframes shrinkOut {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.2);
+      opacity: 0;
+    }
   }
   
   @keyframes background-move {
@@ -66,19 +101,15 @@ body {
     border-radius: 20px;
   }
   
-  .gif-movido {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 150px;
-    transform: translate(-50%, -50%);
-    animation: moverse 3s infinite linear;
+  .img-rotate {
+    animation: animation-rotate 3s infinite linear;
+    width: 20vw;
   }
   
-  @keyframes moverse {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    50% { transform: translate(-30%, -40%) rotate(360deg); }
-    100% { transform: translate(-50%, -50%) rotate(0deg); }
+  @keyframes animation-rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(360deg); }
+    100% { transform:  rotate(0deg); }
   }
   
   .boton-gritar {
@@ -90,6 +121,7 @@ body {
     border-radius: 30px;
     cursor: pointer;
     animation: temblar 0.3s infinite;
+    margin: 30px;
   }
   
   @keyframes temblar {
